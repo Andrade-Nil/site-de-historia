@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>História Praça Brasil</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    /* Adicione um estilo para a animação de rolagem suave */
+    html {
+      scroll-behavior: smooth;
+    }
+
+  </style>
+</head>
+<body class="overflow-x-hidden">
+  <!--header init-->
+  <header id="inicio" class="mx-auto bg-header w-full h-[95vh] relative">
+    <img class="w-full h-full absolute z-[-1] object-cover" src="img/bd-header.png" alt="logo-top">
+    <nav class="w-full bg-white p-2 md:p-4 fixed md:top-[32px]  z-[1]">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-[#B47943] font-semibold text-2xl"><img class="w-[60px] md:w-auto" src="img/logo.png" alt="logo"></a>
+        <div class="">
+          <button class="md:hidden block text-[#B47943] button">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8">
+              <path d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+          <div class="hidden flex flex-col md:flex-row md:flex uppercase gap-[32px] absolute md:relative bg-white p-6 right-0 top-[71px] md:right-auto md:top-auto border md:border-hidden h-[10000px] md:h-auto duration-300">
+            <a href="#inicio" class="text-[#B47943] duration-300 button">inicio</a>
+            <a href="#audio-guia" class="text-[#B47943] duration-300 button">audio guia</a>
+            <a href="#galeria" class="text-[#B47943] duration-300 button">galeria</a>
+            <a href="#sobre-nos" class="text-[#B47943] duration-300 button">sobre nós</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="m-auto container flex flex-col md:flex-row text-white h-full">
+      <div class="w-full md:w-[50%] h-full flex flex-col h-full justify-center gap-[72px] px-8 md:px-auto">
+        <h3 class="text-4xl md:text-6xl font-semibold">
+          Lorem ipsum is placeholder text commonly.
+        </h3>
+        <p class="md:text-lg">
+          Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
+        </p>
+      </div>
+    </div>
+  </header>
+  <!--header finish-->
+  <!--audio guide init-->
+  <section id="audio-guia" class="container mx-auto py-16"> 
+    <div class="flex flex-col items-center w-full mb-16">
+      <div class="text-5xl text-slate-500">
+        Áudio Guia
+      </div>
+      <div class="w-32 border-y-2 rounded-full border-[#B47943] mt-5 mb-2"></div>
+      <div class="text-slate-500 text-center">
+        Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
+      </div>
+    </div>
+    <div class="park w-full">
+      <div class="bg-header w-full relative">
+        <img class="w-full" src="img/park.png" alt="">
+        <div class="group" data-target="modal-1">          
+          <img class="absolute top-[6%] left-[25%] group-hover:animate-bounce w-[24px] md:w-auto" src="img/maps.png" alt="maps">
+        </div>
+        <div class="group" data-target="modal-2">          
+          <img class="absolute top-[25%] left-[47%] group-hover:animate-bounce w-[24px] md:w-auto" src="img/maps.png" alt="maps">
+        </div>
+        <div class="group" data-target="modal-3">          
+          <img class="absolute top-[6%] left-[63%] group-hover:animate-bounce w-[24px] md:w-auto" src="img/maps.png" alt="maps">
+        </div>
+        <div class="group" data-target="modal-4">          
+          <img class="absolute top-[59%] left-[82%] group-hover:animate-bounce w-[24px] md:w-auto" src="img/maps.png" alt="maps">
+        </div>
+        <div class="group" data-target="modal-6">          
+          <img class="absolute top-[43%] left-[24%] group-hover:animate-bounce w-[24px] md:w-auto" src="img/maps.png" alt="maps">
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <div id="modal-1" class="fixed inset-0 flex items-center justify-center hidden z-30 modal">
+        <!-- Conteúdo do Modal 1 -->
+        <div class="modal-background absolute inset-0 bg-black opacity-50 z-40"></div>
+        <div class="flex gap-[32px] flex-col modal-content bg-white p-6 rounded shadow-lg absolute z-50 h-[90vh] sm:h-auto overflow-y-auto">
+          <div class="flex justify-between gap-[32px] ">
+            <h2 class="text-lg font-semibold">Lorem ipsum</h2>
+            <button class="text-2xl" id="fechar-modal-1">x</button>
+          </div>
+          <div class="flex justify-between gap-[32px] flex-col sm:flex-row">
+            <p class="text-justify w-64 md:w-80">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <!-- Swiper -->
+            <div class="swiper mySwiper w-72 h-auto">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?animal" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?nature" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?people" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?flower" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?travel" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?fruits" alt="img"></div>
+              </div>
+              <div class="swiper-button-next text-[#B47943]"></div>
+              <div class="swiper-button-prev text-[#B47943]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div id="modal-2" class="fixed inset-0 flex items-center justify-center hidden z-30 modal">
+        <!-- Conteúdo do Modal 2 -->
+        <div class="modal-background absolute inset-0 bg-black opacity-50 z-40"></div>
+        <div class="flex gap-[32px] flex-col modal-content bg-white p-6 rounded shadow-lg absolute z-50 h-[90vh] sm:h-auto overflow-y-auto">
+          <div class="flex justify-between gap-[32px] ">
+            <h2 class="text-lg font-semibold">Lorem ipsum</h2>
+            <button class="text-2xl" id="fechar-modal-2">x</button>
+          </div>
+          <div class="flex justify-between gap-[32px] flex-col sm:flex-row">
+            <p class="text-justify w-64 md:w-80">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <!-- Swiper -->
+            <div class="swiper mySwiper w-72 h-auto">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?animal" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?nature" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?people" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?flower" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?travel" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?fruits" alt="img"></div>
+              </div>
+              <div class="swiper-button-next text-[#B47943]"></div>
+              <div class="swiper-button-prev text-[#B47943]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div id="modal-3" class="fixed inset-0 flex items-center justify-center hidden z-30 modal">
+        <!-- Conteúdo do Modal 3 -->
+        <div class="modal-background absolute inset-0 bg-black opacity-50 z-40"></div>
+        <div class="flex gap-[32px] flex-col modal-content bg-white p-6 rounded shadow-lg absolute z-50 h-[90vh] sm:h-auto overflow-y-auto">
+          <div class="flex justify-between gap-[32px] ">
+            <h2 class="text-lg font-semibold">Lorem ipsum</h2>
+            <button class="text-2xl" id="fechar-modal-3">x</button>
+          </div>
+          <div class="flex justify-between gap-[32px] flex-col sm:flex-row">
+            <p class="text-justify w-64 md:w-80">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <!-- Swiper -->
+            <div class="swiper mySwiper w-72 h-auto">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?animal" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?nature" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?people" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?flower" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?travel" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?fruits" alt="img"></div>
+              </div>
+              <div class="swiper-button-next text-[#B47943]"></div>
+              <div class="swiper-button-prev text-[#B47943]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div id="modal-4" class="fixed inset-0 flex items-center justify-center hidden z-30 modal">
+        <!-- Conteúdo do Modal 4 -->
+        <div class="modal-background absolute inset-0 bg-black opacity-50 z-40"></div>
+        <div class="flex gap-[32px] flex-col modal-content bg-white p-6 rounded shadow-lg absolute z-50 h-[90vh] sm:h-auto overflow-y-auto">
+          <div class="flex justify-between gap-[32px] ">
+            <h2 class="text-lg font-semibold">Lorem ipsum</h2>
+            <button class="text-2xl" id="fechar-modal-4">x</button>
+          </div>
+          <div class="flex justify-between gap-[32px] flex-col sm:flex-row">
+            <p class="text-justify w-64 md:w-80">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <!-- Swiper -->
+            <div class="swiper mySwiper w-72 h-auto">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?animal" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?nature" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?people" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?flower" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?travel" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?fruits" alt="img"></div>
+              </div>
+              <div class="swiper-button-next text-[#B47943]"></div>
+              <div class="swiper-button-prev text-[#B47943]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+
+      <div id="modal-6" class="fixed inset-0 flex items-center justify-center hidden z-30 modal">
+        <div class="modal-background absolute inset-0 bg-black opacity-50 z-40"></div>
+        <div class="flex gap-[32px] flex-col modal-content bg-white p-6 rounded shadow-lg absolute z-50 h-[90vh] sm:h-auto overflow-y-auto">
+          <div class="flex justify-between gap-[32px] ">
+            <h2 class="text-lg font-semibold">Lorem ipsum</h2>
+            <button class="text-2xl" id="fechar-modal-6">x</button>
+          </div>
+          <div class="flex justify-between gap-[32px] flex-col sm:flex-row">
+            <p class="text-justify w-64 md:w-80">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <!-- Swiper -->
+            <div class="swiper mySwiper w-72 h-auto">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?animal" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?nature" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?people" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?flower" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?travel" alt="img"></div>
+                <div class="swiper-slide flex items-center"><img class="w-80 h-60" src="https://source.unsplash.com/1920x1280/?fruits" alt="img"></div>
+              </div>
+              <div class="swiper-button-next text-[#B47943]"></div>
+              <div class="swiper-button-prev text-[#B47943]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  <!--audio guide finish-->
+  <section id="galeria" class="bg-[#EAEAEA] py-16">
+    <div class="flex flex-col items-center w-full mb-16">
+      <div class="text-5xl text-slate-500">
+        Galeria de Fotos
+      </div>
+      <div class="w-32 border-y-2 rounded-full border-[#B47943] mt-5 mb-2"></div>
+      <div class="text-slate-500 text-center">
+        Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
+      </div>
+    </div>
+    <div class="container bg-[#E1D09A] mx-auto p-16 grid">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 w-full items-start">
+        <div class="flex flex-col gap-[24px]">
+          <img class="object-cover" src="https://source.unsplash.com/1920x1280/?animal" alt="img">
+          <div class="flex gap-[16px] items-end">
+            <span id="descricao-1" class="hidden w-3/5 font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <button class="w-[100px] h-[40px] rounded-md bg-[#B47943] text-white p-2 toggle-button" data-target="descricao-1">Descrição</button>
+          </div>
+        </div>
+        <div class="col-span-1 lg:col-span-2 border border-[4px] border-dashed bg-white flex flex-col lg:flex-row gap-[24px] items-center p-8">
+          <img class="w-[200px] h-[200px] rounded-full object-cover" src="https://source.unsplash.com/1920x1280/?nature" alt="img">
+          <div class="flex flex-col justify-between gap-[16px]">
+            <strong>Lorem ipsum dolor</strong>
+            <span id="descricao-2" class="hidden font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit pretium dignissim. Proin commodo sem vel lectus hendrerit, ac gravida lectus finibus. Pellentesque sagittis mattis orci egestas pulvinar.</span>
+            <div class="flex justify-end">
+              <button class="w-[100px] h-[40px] rounded-md bg-[#B47943] text-white p-2 toggle-button" data-target="descricao-2">Descrição</button>
+            </div>
+          </div>
+        </div>
+        <div class="border border-[4px] border-dashed bg-white flex
+        flex-col justify-center items-center gap-[16px] p-8">
+          <img class="w-[200px] h-[200px] rounded-full object-cover" src="https://source.unsplash.com/1920x1280/?people" alt="img">
+          <div class="flex flex-col justify-between gap-[16px]">
+            <strong>Lorem ipsum dolor</strong>
+            <span id="descricao-3" class="hidden font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit pretium dignissim. Proin commodo sem vel lectus hendrerit, ac gravida lectus finibus. Pellentesque sagittis mattis orci egestas pulvinar.</span>
+            <div class="flex justify-end">
+              <button class="w-[100px] h-[40px] rounded-md bg-[#B47943] text-white p-2 toggle-button" data-target="descricao-3">Descrição</button>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-[16px]">
+          <img class="object-cover" src="https://source.unsplash.com/1920x1280/?flower" alt="img">
+          <div class="flex flex-col justify-between gap-[16px]">
+            <strong>Lorem ipsum dolor</strong>
+            <span id="descricao-4" class="hidden font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit pretium dignissim. Proin commodo sem vel lectus hendrerit, ac gravida lectus finibus. Pellentesque sagittis mattis orci egestas pulvinar.</span>
+            <div class="flex justify-start">
+              <button class="w-[100px] h-[40px] rounded-md bg-[#B47943] text-white p-2 toggle-button" data-target="descricao-4">Descrição</button>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-[16px]">
+          <img class="object-cover" src="https://source.unsplash.com/1920x1280/?nature" alt="img">
+          <div class="flex flex-col justify-between gap-[16px]">
+            <strong>Lorem ipsum dolor</strong>
+            <span id="descricao-5" class="hidden font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit pretium dignissim. Proin commodo sem vel lectus hendrerit, ac gravida lectus finibus. Pellentesque sagittis mattis orci egestas pulvinar.</span>
+            <div class="flex justify-start">
+              <button class="w-[100px] h-[40px] rounded-md bg-[#B47943] text-white p-2 toggle-button" data-target="descricao-5">Descrição</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre-nos" class="relative">
+    <img class="w-full h-full absolute z-[-1] object-cover" src="img/park-night2.png" alt="park-night">
+    <div class="container mx-auto flex flex-col md:flex-row gap-8 p-8 md:p-16">
+      <div class="md:w-[50%]">
+        <div class="flex flex-col w-full mb-16">
+          <div class="text-5xl  text-white">
+            Lorem ipsum dolor sit amet
+          </div>
+          <div class="w-32 border-y-2 rounded-full border-[#B47943] mt-5 mb-2"></div>
+          <div class=" text-white text-center text-justify">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu nisl nunc mi ipsum faucibus. Pellentesque pulvinar pellentesque habitant morbi tristique. At varius vel pharetra vel turpis nunc. Duis tristique sollicitudin nibh sit amet commodo nulla. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Eros in cursus turpis massa tincidunt dui ut ornare. Amet mauris commodo quis imperdiet. Ridiculus mus mauris vitae ultricies leo integer. Ultricies mi quis hendrerit dolor magna eget. Pharetra pharetra massa massa ultricies mi quis. Pharetra sit amet aliquam id. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. Velit ut tortor pretium viverra. Amet venenatis urna cursus eget nunc scelerisque viverra mauris. Convallis convallis tellus id interdum. Consequat mauris nunc congue nisi.
+          </div>
+        </div>
+      </div>
+      <div class="md:w-[50%]">
+        <img class="w-full leading-normal" src="img/park-night.png" alt="park-night">
+      </div>
+    </div>
+  </section>
+
+  <footer class="flex flex-col gap-10 container mx-auto py-10">
+    <div class="flex flex-col items-center w-72 gap-2 text-center mx-auto">
+      <div class="text-3xl text-slate-500">
+        Let’s work together
+      </div>
+      <!-- <div class="w-32 border-y-2 rounded-full border-[#B47943] mt-5 mb-2"></div> -->
+      <div class="text-slate-500 text-center">
+        Lorem ipsum is placeholder text commonly used in the graphic, print
+      </div>
+      <img src="img/logo.png" alt="logo-footer">
+    </div>
+    <hr>
+    <div class="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-none">
+      <div class="text-slate-500 w-[325px] flex justify-start  items-center">
+        © 2023 Design. Todos os direitos reservados.
+      </div>
+      <div class="flex justify-center  items-center w-[325px]">
+        <a href="#" class="">
+          <svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#6b7280" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/>
+        </svg>
+        </a>
+        <a href="#" class="">
+          <svg width="30" height="30" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#6b7280" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334c0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518a3.301 3.301 0 0 0 1.447-1.817a6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429a3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218a3.203 3.203 0 0 1-.865.115a3.23 3.23 0 0 1-.614-.057a3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+        </svg>
+        </a>
+        <a href="#" class="">
+          <svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#6b7280" d="M12.001 9a3 3 0 1 0 0 6a3 3 0 0 0 0-6Zm0-2a5 5 0 1 1 0 10a5 5 0 0 1 0-10Zm6.5-.25a1.25 1.25 0 0 1-2.5 0a1.25 1.25 0 0 1 2.5 0ZM12.001 4c-2.474 0-2.878.007-4.029.058c-.784.037-1.31.142-1.798.332a2.886 2.886 0 0 0-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.007 9.075 4 9.461 4 12c0 2.475.007 2.878.058 4.029c.037.783.142 1.31.331 1.797c.17.435.37.748.702 1.08c.337.336.65.537 1.08.703c.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.475 0 2.878-.007 4.029-.058c.782-.037 1.308-.142 1.797-.331a2.91 2.91 0 0 0 1.08-.703c.337-.336.538-.649.704-1.08c.19-.492.296-1.018.332-1.8c.052-1.103.058-1.49.058-4.028c0-2.474-.007-2.878-.058-4.029c-.037-.782-.143-1.31-.332-1.798a2.912 2.912 0 0 0-.703-1.08a2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.926 4.006 14.54 4 12 4Zm0-2c2.717 0 3.056.01 4.123.06c1.064.05 1.79.217 2.427.465c.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.047 1.066.06 1.405.06 4.122c0 2.717-.01 3.056-.06 4.122c-.05 1.065-.218 1.79-.465 2.428a4.884 4.884 0 0 1-1.153 1.772a4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465c-1.067.047-1.406.06-4.123.06c-2.717 0-3.056-.01-4.123-.06c-1.064-.05-1.789-.218-2.427-.465a4.89 4.89 0 0 1-1.772-1.153a4.905 4.905 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428c-.048-1.066-.06-1.405-.06-4.122c0-2.717.01-3.056.06-4.122c.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772a4.897 4.897 0 0 1 1.772-1.153c.637-.248 1.362-.415 2.427-.465C8.945 2.013 9.284 2 12.001 2Z"/>
+        </svg>
+        </a>
+        <a href="#" class="">
+          <svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#6b7280" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"/>
+        </svg>
+        </a>
+      </div>
+      <a href="#" class="flex justify-center sm:justify-end  items-center w-[325px]">
+        <img width="60" height="60" src="img/aluz-web.png" alt="aluz-web">
+      </a>
+    </div>
+  </footer>
+  <script>
+    // Adicione um evento de clique aos botões
+    document.addEventListener('DOMContentLoaded', function () {
+      const buttons = document.querySelectorAll('.toggle-button');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', function () {
+          const targetId = button.getAttribute('data-target');
+          const targetElement = document.getElementById(targetId);
+
+          // Alternar a classe 'hidden' para mostrar ou ocultar a descrição
+          targetElement.classList.toggle('hidden');
+        });
+      });
+    });
+  </script>
+  <!-- <script>
+    $(document).ready(function () {
+        // Função que será chamada quando ocorrer o evento de rolagem
+        $(window).scroll(function () {
+            // Verifica se a posição de rolagem é maior que 200 pixels
+            if ($(this).scrollTop() < 200) {
+                // Ativa o efeito
+                $('#efeito').fadeIn();
+            } else {
+                // Desativa o efeito se a rolagem for menor que 200 pixels
+                $('#efeito').fadeOut();
+            }
+        });
+    });
+  </script> -->
+  <script>
+    const groupElements = document.querySelectorAll('.group');
+  
+    groupElements.forEach(element => {
+      element.addEventListener('click', () => {
+        const targetModalId = element.getAttribute('data-target');
+        const modal = document.getElementById(targetModalId);
+        modal.classList.remove('hidden');
+      });
+    });
+  
+    const modals = document.querySelectorAll('.modal');
+  
+    // modals.forEach(modal => {
+    //   modal.addEventListener('click', () => {
+    //     modal.classList.add('hidden');
+    //   });
+    // });
+  
+    // Atualize o código para fechar modais individualmente
+    for (let i = 1; i <= modals.length; i++) {
+      const fecharModalBtn = document.getElementById(`fechar-modal-${i}`);
+      if (fecharModalBtn) {
+        fecharModalBtn.addEventListener('click', () => {
+          modals[i - 1].classList.add('hidden');
+        });
+      }
+    }
+  </script>
+  <script>
+    const menuButton = document.querySelector('.button');
+    const navLinks = document.querySelector('.hidden');
+    menuButton.addEventListener('click', () => {
+      navLinks.classList.toggle('hidden');
+    });
+  </script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      
+      centeredSlides: true,
+      slidesPerView: 1,
+      grabCursor: true,
+      freeMode: false,
+      loop: true,
+      mousewheel: false,
+      speed: 1000,
+      keyboard: {
+        enabled: true
+      },
+
+      // Enabled autoplay mode
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false
+      },
+
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: false,
+        clickable: true
+      },
+
+      // If we need navigation
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+    });
+  </script>
+</body>
+</html>
